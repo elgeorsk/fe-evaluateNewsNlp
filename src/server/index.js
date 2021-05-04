@@ -3,7 +3,7 @@ const express = require('express');
 const mockAPIResponse = require('./mockAPI.js');
 
 // Require the Aylien npm package
-let aylien = require("aylien_textapi");
+let aylien = require('aylien_textapi');
 
 // This will allow us to use environment variables we set in a new file
 const dotenv = require('dotenv');
@@ -28,8 +28,8 @@ app.get('/', function (req, res) {
 });
 
 // designates what port the app will listen to for incoming requests
-app.listen(8082, function () {
-    console.log('Example app listening on port 8082!')
+app.listen(8080, function () {
+    console.log('Example app listening on port 8080!')
 });
 
 app.get('/test', function (req, res) {
