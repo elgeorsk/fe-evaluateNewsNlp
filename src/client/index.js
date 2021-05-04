@@ -1,5 +1,5 @@
-import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
+import { checkForName } from './assets/js/nameChecker'
+import { handleSubmit } from './assets/js/formHandler'
 
 console.log(checkForName);
 
