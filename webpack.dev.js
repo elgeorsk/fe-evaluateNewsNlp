@@ -8,6 +8,10 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
+    output: {
+         libraryTarget: 'var',
+         library: 'Client'
+     },
     module: {
         rules: [
             {
@@ -16,14 +20,18 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
-                    test: /\.scss$/,
-                    use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+                test: /\.scss$/,
+                use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader'
             }
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: './src/client/assets/views/index.html',
+            template: './src/client/views/index.html',
             filename: './index.html',
         }),
         new CleanWebpackPlugin({
