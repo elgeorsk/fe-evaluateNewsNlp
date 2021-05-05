@@ -9,8 +9,10 @@ module.exports = {
     entry: './src/client/index.js',
     mode: 'production',
     output: {
-         libraryTarget: 'var',
-         library: 'Client'
+        filename: 'assets/js/[name].js',
+        path: path.resolve(__dirname, 'dist'),
+        libraryTarget: 'var',
+        library: 'Client'
      },
     module: {
         rules: [
@@ -41,10 +43,6 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({ filename: 'assets/css/[name].css' })
     ],
-    output: {
-        filename: 'assets/js/[name].js',
-        path: path.resolve(__dirname, 'dist'),
-    },
     optimization: {
       minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
     }
