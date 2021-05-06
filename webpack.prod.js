@@ -6,6 +6,8 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 //Add favicon
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// Add Service Workers
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     entry: './src/client/index.js',
@@ -44,7 +46,8 @@ module.exports = {
             template: './src/client/views/index.html',
             filename: './index.html'
         }),
-        new MiniCssExtractPlugin({ filename: 'assets/css/[name].css' })
+        new MiniCssExtractPlugin({ filename: 'assets/css/[name].css' }),
+        new WorkboxPlugin.GenerateSW()
     ],
     optimization: {
       minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
