@@ -1,7 +1,5 @@
 # Project Instructions
 
-This repo is your starter code for the project. It is the same as the starter code we began with in lesson 2. Install and configure Webpack just as we did in the course. Feel free to refer to the course repo as you build this one, and remember to make frequent commits and to create and merge branches as necessary!
-
 The goal of this project is to give you practice with:
 - Setting up Webpack
 - Sass styles
@@ -20,12 +18,17 @@ You could spend years and get a masters degree focusing on the details of creati
 
 ## Getting started
 
-It would probably be good to first get your basic project setup and functioning. Follow the steps from the course up to Lesson 4 but don't add Service Workers just yet. We won't need the service workers during development and having extra caches floating around just means there's more potential for confusion. So, fork this repo and begin your project setup.
-
 Remember that once you clone, you will still need to install everything:
 
 `cd` into your new folder and run:
 - `npm install`
+
+You can run the project in `development` or `production` mode by using the following commands:
+
+- Development mode: `npm run build-dev`
+- Production mode: `npm run build-prod`
+
+Note: scripts can be found in `package.json`
 
 ## Setting up the API
 
@@ -96,13 +99,15 @@ I won't provide further examples here, as it's up to you to create the various r
 
 ## After the Aylien API
 
-Once you are hooked up to the Aylien API, you are most of the way there! Along with making sure you are following all the requirements in the project rubric in the classroom, here are a few other steps to make sure you take.
+Once you are hooked up to the Aylien API, you are most of the way there!
 
 - Parse the response body to dynamically fill content on the page.
-- Test that the server and form submission work, making sure to also handle error responses if the user input does not match API requirements. 
-- Go back to the web pack config and add the setup for service workers.  
-- Test that the site is now available even when you stop your local server 
+- Test that the server and form submission work, making sure to also handle error responses if the user input does not match API requirements.
+- Go back to the web pack config and add the setup for service workers.
+- Test that the site is now available even when you stop your local server.
 
 ## Deploying
 
-A great step to take with your finished project would be to deploy it! Unfortunately its a bit out of scope for me to explain too much about how to do that here, but checkout [Netlify](https://www.netlify.com/) or [Heroku](https://www.heroku.com/) for some really intuitive free hosting options.
+A great step to take with your finished project would be to deploy it! 
+
+Checkout [Netlify](https://www.netlify.com/) or [Heroku](https://www.heroku.com/) for some really intuitive free hosting options.
