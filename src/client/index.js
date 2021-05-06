@@ -1,5 +1,5 @@
-import { checkForName } from './js/nameChecker';
-import { handleSubmit } from './js/formHandler';
+import { checkForName } from './js/getNlpData';
+import { handleSubmit } from './js/app';
 
 import './styles/media.scss';
 import './styles/style.scss';
