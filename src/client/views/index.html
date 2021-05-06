@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html xmlns:https="http://www.w3.org/1999/xhtml">
     <head>
-        <meta charset="utf-8">
-        <title>Test</title>
+        <meta charset="UTF-8">
+        <!-- mobile first -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>NLP App</title>
     </head>
     <body>
         <header>
@@ -12,25 +14,26 @@
                     <p>Natural Language Processing (NLP)</p>
                 </div>
             </a>
-            <div class="">
-                navigation
-            </div>
         </header>
         <main>
-            <section>
+            <section class="info">
+                <h1>Welcome to NLP App</h1>
+                <p>This application is a part of Front End Web Developer Nanodegree by Udacity - <a href="https://aylien.com/product/news-api" target="_blank">AYLIEN News API</a>
+                    <br/><br/><i>Build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.</i><br/></p>
+            </section>
+            <section class="search">
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="Client.handleSubmit(event)" placeholder="Name">
+                    <textarea id="name" onblur="Client.handleSubmit(event)" placeholder="Name" cols="30" rows="2"></textarea>
                     <input id="generate" type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             </section>
-
-            <section>
-                <strong>Form Results:</strong>
+            <section class="entryHolder">
+                <strong>Form Results:<br/></strong>
                 <div id="results"></div>
             </section>
         </main>
         <footer>
-            <p>This is a footer</p>
+            <p>&copy Udacity 2021</p>
         </footer>
     </body>
 </html>

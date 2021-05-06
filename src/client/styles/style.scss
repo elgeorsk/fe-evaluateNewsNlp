@@ -1,8 +1,9 @@
 /* Google fonts */
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 * {
 	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 	&::before {
 		box-sizing: border-box;
 	}
@@ -12,13 +13,11 @@
 }
 
 html {
-	font-family: 'Oswald', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-	font-family: 'Oswald', 'Ranga', sans-serif;
 	margin: auto;
 	max-width: 60em;
 	height: 100vh;
@@ -54,7 +53,6 @@ button {
 		color: #eb6e4b;
 		text-decoration: none;
 	}
-	font-family: 'Oswald', sans-serif;
 	background-color: Transparent;
 	color: #017a9b;
 	background-repeat: no-repeat;
@@ -117,33 +115,32 @@ header {
 
 input {
 	font-size: 16px;
-	font-family: 'Oswald', sans-serif;
 	width: 100%;
 	border: none;
 }
 
 textarea {
 	font-size: 16px;
-	font-family: 'Oswald', sans-serif;
 	border: none;
+	outline: none;
 	padding: 10px;
 	margin-right: 5px;
+	margin-bottom: 10px;
 	width: 100%;
 	text-align: center;
-
 	&:not(:placeholder-shown) {
 		color: #017a9b;
 		border-bottom: 4px solid #017a9b;
 	}
 	&:focus {
 		outline: none;
-		border: 1px solid #017a9b;
 	}
 }
 
 .input-field {
 	font-size: inherit;
 	text-align: center;
+	border: none;
 	width: 200px;
 	&:placeholder-shown {
 		background: none;
@@ -156,10 +153,6 @@ textarea {
 		outline: none;
 		border-bottom: 4px solid #017a9b;
 	}
-}
-
-label {
-	font-family: 'Oswald', sans-serif;
 }
 
 main {
@@ -207,7 +200,7 @@ footer {
 
 /* Custom scroll bar */
 /* width */
-@mixin scrollbars {
+@mixin scrollbars(){
     &::-webkit-scrollbar {
 	    width: 10px;
     }
