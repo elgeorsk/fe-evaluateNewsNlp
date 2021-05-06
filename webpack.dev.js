@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+//Add favicon
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 // Add devServer and mockData in development mode
 const mockAPIResponse = require('./src/server/mockAPI.js');
@@ -33,6 +35,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new FaviconsWebpackPlugin('./src/client/img/favicon-32x32.png'),
         new HtmlWebPackPlugin({
             template: './src/client/views/index.html',
             filename: './index.html',

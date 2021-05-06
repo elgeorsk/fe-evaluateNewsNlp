@@ -4,6 +4,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+//Add favicon
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
     entry: './src/client/index.js',
@@ -37,6 +39,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new FaviconsWebpackPlugin('./src/client/img/favicon-32x32.png'),
         new HtmlWebPackPlugin({
             template: './src/client/views/index.html',
             filename: './index.html'
