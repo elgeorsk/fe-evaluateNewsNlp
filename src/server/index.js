@@ -38,8 +38,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // fetch data from aylien api
-// Require the Aylien npm package
 let json = [];
+// Require the Aylien npm package
 let AylienNewsApi = require('aylien-news-api');
 
 let defaultClient = AylienNewsApi.ApiClient.instance;
