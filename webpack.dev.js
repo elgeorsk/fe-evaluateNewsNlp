@@ -52,10 +52,10 @@ module.exports = {
     ],
     devServer: {
         before: function(app) {
-          app.get("/test", function(req, res) {
-            res.json(mockAPIResponse);
-          });
-        },
+            app.get("/test", function(req, res) {
+                res.json(mockAPIResponse);
+            });
+            },
         open: true,
         port: 8080
       }

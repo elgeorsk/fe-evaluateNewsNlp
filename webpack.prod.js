@@ -14,7 +14,7 @@ module.exports = {
     mode: 'production',
     output: {
         filename: 'assets/js/[name].js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist_prod'),
         libraryTarget: 'var',
         library: 'Client'
      },
