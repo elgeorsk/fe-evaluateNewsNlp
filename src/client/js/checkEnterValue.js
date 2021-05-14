@@ -1,18 +1,14 @@
 function checkEnterValue(inputText) {
-    //console.log('::: Running checkEnterValue :::', inputText);
-    let names = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ];
+    // source https://stackoverflow.com/questions/15458876/check-if-a-string-is-html-or-not/15458987
+    let htmlRegex = new RegExp(/<[a-z][\s\S]*>/);
 
-    if(names.includes(inputText)) {
-        alert('Welcome, Captain!')
-    };
-
-    let data = inputText;
+    let data;
+    if(htmlRegex.test(inputText)) {
+        alert('Input text contains html tags, please use only plain text');
+        data = 'error';
+    }else{
+        data = inputText;
+    }
     return data;
 };
 

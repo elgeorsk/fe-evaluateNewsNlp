@@ -1,44 +1,114 @@
-let json = [
-    {
-        "title": "Cisco to acquire Indy startup Socio to bring hybrid events to Webex",
-        "name": "Pythom"
+let json = {
+    "status": {
+        "code": 0,
+        "msg": "OK",
+        "credits": "1",
+        "remaining_credits": "19995"
     },
-    {
-        "title": "Hedge fund Tiger Global is beating out Silicon Valley VCs and averaging more than 1 startup investment per business day so far this year. Here's 110 of them.",
-        "name": "FNTalk.com"
-    },
-    {
-        "title": "MVL Raises $8M and Announces Startup Studio Innovation; Assembles Who’s Who of Successful Operators as Investors & Co-Builders",
-        "name": "Jotup"
-    },
-    {
-        "title": "Seattle startup Jargon sells IP to Remitly; founders will join remittance company",
-        "name": "News site"
-    },
-    {
-        "title": "Cincinnati health tech startup collaborating with Bay Area innovation hub",
-        "name": "The Post and Mail"
-    },
-    {
-        "title": "Cincinnati health tech startup collaborating with Bay Area innovation hub",
-        "name": "St. Marys Daily Press"
-    },
-    {
-        "title": "Sources: blockchain-based gaming infrastructure startup Forte raises $185M Series B at a $1B post-money valuation led by Griffin Gaming Partners",
-        "name": "Tech Meme"
-    },
-    {
-        "title": "Longevity startup Gero AI has a mobile API for quantifying health changes",
-        "name": "First Word Medtech"
-    },
-    {
-        "title": "Cincinnati health tech startup collaborating with Bay Area innovation hub",
-        "name": "Biz Journals"
-    },
-    {
-        "title": "Cisco to acquire Indy startup Socio to bring hybrid events to Webex",
-        "name": "Tech Investor News"
-    }
-]
+    "model": "general_en",
+    "score_tag": "P",
+    "agreement": "DISAGREEMENT",
+    "subjectivity": "SUBJECTIVE",
+    "confidence": "86",
+    "irony": "NONIRONIC",
+    "sentence_list": [
+        {
+            "text": "Main dishes were quite good, but desserts were too sweet for me.",
+            "inip": "0",
+            "endp": "63",
+            "bop": "y",
+            "confidence": "86",
+            "score_tag": "P",
+            "agreement": "DISAGREEMENT",
+            "segment_list": [
+                {
+                    "text": "Main dishes were quite good",
+                    "segment_type": "main",
+                    "inip": "0",
+                    "endp": "26",
+                    "confidence": "98",
+                    "score_tag": "P+",
+                    "agreement": "AGREEMENT",
+                    "polarity_term_list": [
+                        {
+                            "text": "(quite) good",
+                            "inip": "23",
+                            "endp": "26",
+                            "confidence": "98",
+                            "score_tag": "P+"
+                        }
+                    ]
+                },
+                {
+                    "text": "desserts were too sweet for me",
+                    "segment_type": "main",
+                    "inip": "33",
+                    "endp": "62",
+                    "confidence": "92",
+                    "score_tag": "N",
+                    "agreement": "AGREEMENT",
+                    "polarity_term_list": [
+                        {
+                            "text": "(too) sweet@A",
+                            "inip": "51",
+                            "endp": "55",
+                            "confidence": "92",
+                            "score_tag": "N",
+                            "sentimented_concept_list": [
+                                {
+                                    "form": "dessert",
+                                    "id": "0e15bbd941",
+                                    "variant": "desserts",
+                                    "inip": "33",
+                                    "endp": "40",
+                                    "type": "Top>Product>Food",
+                                    "score_tag": "N"
+                                }
+                            ]
+                        }
+                    ],
+                    "segment_list": [
+                        {
+                            "text": "too sweet for me",
+                            "segment_type": "main",
+                            "inip": "47",
+                            "endp": "62",
+                            "confidence": "92",
+                            "score_tag": "N",
+                            "agreement": "AGREEMENT",
+                            "polarity_term_list": [
+                                {
+                                    "text": "(too) sweet@A",
+                                    "inip": "51",
+                                    "endp": "55",
+                                    "confidence": "92",
+                                    "score_tag": "N"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "sentimented_entity_list": [],
+            "sentimented_concept_list": [
+                {
+                    "form": "dessert",
+                    "id": "0e15bbd941",
+                    "type": "Top>Product>Food",
+                    "score_tag": "N"
+                }
+            ]
+        }
+    ],
+    "sentimented_entity_list": [],
+    "sentimented_concept_list": [
+        {
+            "form": "dessert",
+            "id": "0e15bbd941",
+            "type": "Top>Product>Food",
+            "score_tag": "N"
+        }
+    ]
+};
 
 module.exports = json;

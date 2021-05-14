@@ -192,6 +192,21 @@ section {
 	overflow-y: auto;
 }
 
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #28b5dc;
+	text-align: left;
+	padding: 2px;
+}
+
+tr:nth-child(even) {
+	background-color: #28b5dc;
+}
+
 footer {
 	grid-area: footer;
 	text-align: center;

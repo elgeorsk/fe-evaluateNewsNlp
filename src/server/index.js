@@ -37,54 +37,27 @@ app.get('/test', function (req, res) {
 const dotenv = require('dotenv');
 dotenv.config();
 
-// fetch data from aylien api
-let json = [];
-// Require the Aylien npm package
-let AylienNewsApi = require('aylien-news-api');
+// fetch data from  meaning cloud API
+let FormData = require('form-data');
+const fetch = require('node-fetch');
 
-let defaultClient = AylienNewsApi.ApiClient.instance;
+const apiURL = 'https://api.meaningcloud.com/sentiment-2.1';
+// Update request and response variable and add async
+app.post('/api', async function (req, res) {
+    const formdata = new FormData();
+    formdata.append('key', process.env.MEANING_CLOUD_KEY);
+    formdata.append('txt', req.query.input);
+    formdata.append('lang', "en");  // 2-letter code, like en es fr ...
 
-let app_id = defaultClient.authentications['app_id'];
-app_id.apiKey = process.env.AYLIEN_API_ID;
-
-let app_key = defaultClient.authentications['app_key'];
-app_key.apiKey = process.env.AYLIEN_API_KEY;
-
-let api = new AylienNewsApi.DefaultApi();
-function getAylienData(txt){
-    let opts = {
-        language: ["en"],
-        publishedAtStart: "NOW-7DAYS",
-        title: txt
+    const requestOptions = {
+        method: 'POST',
+        body: formdata,
+        redirect: 'follow'
     };
 
-    let callback = function(error, data, response) {
-
-        if (error) {
-            console.error(error);
-        } else {
-            //console.log("API called successfully. Returned data: ");
-            //console.log("========================================");
-            //console.log("--LENGTH-- " + json.length);
-            // empty json array
-            json.length = 0;
-            //console.log("--LENGTH-- " + json.length);
-            for (let i = 0; i < data.stories.length; i++) {
-                let obj = {
-                    title: data.stories[i].title,
-                    name: data.stories[i].source.name
-                }
-                json.push(obj);
-            }
-        }
-    };
-
-    api.listStories(opts, callback);
-
-    return json;
-}
-
-app.get('/api', function (req,res){
-    getAylienData(req.query.input);
-    res.send(json);
-});
+    const apiResponse = await fetch(apiURL, requestOptions)
+        .then(apiResponse => apiResponse.json())
+        .then(data => {
+            res.send(data)})
+        .catch(error => console.log('error', error));
+})
