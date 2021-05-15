@@ -33,7 +33,6 @@ function showInfoSec() {
     counter = 0;
 }
 
-/*
 //Add Service Workers - https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack
 // Check that service workers are supported
 if ('serviceWorker' in navigator) {
@@ -42,4 +41,3 @@ if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/service-worker.js');
     });
 }
-*/
