@@ -32,3 +32,14 @@ function showInfoSec() {
     hideBtn.classList.add('fa-eye');
     counter = 0;
 }
+
+/*
+//Add Service Workers - https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack
+// Check that service workers are supported
+if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+    });
+}
+*/

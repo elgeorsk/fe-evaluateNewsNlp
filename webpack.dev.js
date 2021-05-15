@@ -4,6 +4,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 //Add favicon
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// Add Service Workers
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 // Add devServer and mockData in development mode
 const mockAPIResponse = require('./src/server/mockAPI.js');
@@ -48,7 +50,8 @@ module.exports = {
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
-        })
+        }),
+        new WorkboxPlugin.GenerateSW()
     ],
     devServer: {
         before: function(app) {
