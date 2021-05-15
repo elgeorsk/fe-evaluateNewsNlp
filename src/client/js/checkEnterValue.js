@@ -4,7 +4,7 @@ function checkEnterValue(inputText) {
 
     let data;
     if(htmlRegex.test(inputText)) {
-        alert('Input text contains html tags, please use only plain text');
+        alert('Input value contains HTML tags, please use only plain text!');
         data = 'error';
     }else{
         data = inputText;

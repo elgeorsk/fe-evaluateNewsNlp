@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <!-- mobile first -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://kit.fontawesome.com/ab29a89efe.js" crossorigin="anonymous"></script>
         <title>NLP App</title>
     </head>
     <body>
@@ -16,13 +18,18 @@
             </a>
         </header>
         <main>
-            <section class="info">
+            <section class="toggle">
+                <button class="fas fa-eye" title="Hide/Show info" id="hide"></button>
+            </section>
+            <section class="title">
                 <h1>Welcome to NLP App</h1>
+            </section>
+            <section class="info">
                 <p>This application is a part of Front End Web Developer Nanodegree by Udacity - <a href="https://www.meaningcloud.com/developer/sentiment-analysis" target="_blank">Meaning Cloud API</a>
-                    <br/><br/><i>Build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.</i><br/></p>
+                    <br/><br/><i>Build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.</i></p>
             </section>
             <section class="search">
-                <form class="">
+                <form>
                     <textarea id="name" placeholder="Name" cols="30" rows="2"></textarea>
                     <input id="generate" type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
@@ -35,7 +42,7 @@
         <footer>
             <p>&copy Udacity 2021</p>
         </footer>
-        <!-- Add Service Workers - https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack -->
+        <!-- Add Service Workers - https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack
         <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
@@ -44,6 +51,6 @@
                     navigator.serviceWorker.register('/service-worker.js');
                 });
             }
-        </script>
+        </script> -->
     </body>
 </html>

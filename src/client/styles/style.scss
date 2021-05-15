@@ -159,13 +159,19 @@ main {
 	grid-area: main;
 	display: grid;
 	padding: 5px;
-	grid-template-rows: 0fr 0fr;
-	grid-template-areas: "info" "search" "entryHolder";
+	grid-template-rows: 0fr 0fr 0fr 0fr;
+	grid-template-areas: "toggle" "title" "info" "search" "entryHolder";
 	overflow-y: auto;
 }
 
-section {
-	line-height: 1.5;
+.toggle {
+	grid-area: toggle;
+	text-align: right;
+}
+
+.title {
+	grid-area: title;
+	text-align: center;
 }
 
 .info {
@@ -174,15 +180,10 @@ section {
 	box-shadow: 0 10px 10px -10px #017a9b;
 }
 
-.column {
-	display: inline-flex;
-	margin-bottom: 10px;
-}
-
 .search {
 	grid-area: search;
 	text-align: center;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	box-shadow: 0 10px 10px -10px #017a9b;
 }
 
